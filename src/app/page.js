@@ -1,8 +1,17 @@
-// Replace default content with this to test setup:
-export default function Home() {
+// src/App.jsx or src/pages/index.jsx
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import JourneyScene from "../components/JourneyScene";
+import ProjectsSection from "../sections/ProjectsSection/ProjectsSection";
+import "../styles/style.css";
+
+export default function App() {
   return (
-    <main className="flex items-center justify-center h-screen bg-black text-white text-4xl font-bold">
-      Portfolio is ready 🚀
-    </main>
+    <>
+      <Navbar />
+      <HeroSection />
+      <JourneyScene />
+      <ProjectsSection />
+    </>
   );
 }
