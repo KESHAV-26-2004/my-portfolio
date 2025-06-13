@@ -9,7 +9,6 @@ import scrollLottieData from "@/assets/scroll_lottie.json";
 import Road from "./Road";
 import CloudBackground from "./CloudBackground";
 import "../styles/style.css";
-import { vw } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,8 +66,8 @@ function JourneyCard({ card, style, isActive }) {
         ...style,
         position: "absolute",
         top: "38%",
-        width: 420,
-        minHeight: 220,
+        width: "min(50vw,50vh)",
+        minHeight: "min(30vh,30vw)",
         transform: `${style.transform} translateX(-50%)`,
         background: "var(--color-surface)",
         border: "1.5px solid var(--color-card-border)",
@@ -85,31 +84,32 @@ function JourneyCard({ card, style, isActive }) {
     >
       <h3 style={{
         color: "var(--cyber-primary)",
-        fontSize: "1.35rem",
+        fontSize: "min(2.5vw,2.5vh)",
         marginBottom: 8,
         fontWeight: 700
       }}>{card.title}</h3>
-      <div style={{ color: "var(--color-text-secondary)", fontSize: 14, marginBottom: 18 }}>
+      <div style={{ color: "var(--color-text-secondary)", fontSize: "min(1.45vw,1.45vh)", marginBottom: 18 }}>
         {card.period}
       </div>
-      <div style={{ marginBottom: 12 }}>
+      <div style={{ marginBottom: 12, display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "flex-start"}}>
         {card.achievements.map((ach, idx) => (
           <div key={idx} style={{
             background: "rgba(0,245,255,0.08)",
             borderRadius: 6,
             padding: "6px 14px",
-            marginBottom: 6,
-            marginLeft: idx === 1 ? 6 : 0,
-            fontSize: 15,
+            fontSize: "min(1.6vw,1.6vh)",
             color: "var(--cyber-primary)",
             border: "1px solid rgba(0,245,255,0.13)",
-            display: "inline-block"
+            display: "inline-block",
+            //flex: "1 1 45%", // ~2 badges per row
+            //maxWidth: "48%", // prevent overflow
+            //boxSizing: "border-box"
           }}>{ach}</div>
         ))}
       </div>
       <div style={{
         color: "var(--color-text-secondary)",
-        fontSize: 15,
+        fontSize: "min(1.6vw,1.6vh)",
         marginTop: 10
       }}>
         {card.description}
@@ -158,6 +158,7 @@ export default function JourneyScene() {
         anticipatePin: 1,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
+          document.body.style.background = "#111827";
           const x = self.progress * totalWidth;
           setScrollX(x);
           scrollState.current.current = x;
@@ -200,14 +201,28 @@ export default function JourneyScene() {
     <section
       ref={journeyRef}
       className="journey-container"
-      style={{ position: "relative", height: "100vh", overflow: "hidden" }}
+      id="journey"
+      style={{ position: "relative",height:"min(100vh,100vw)",overflow: "hidden" }}
     >
-      <CloudBackground />
+
+      <div className="clouds-row"
+        style={{
+          position: "absolute",
+          top: "0",
+          left: "0",
+          right: "0",
+          bottom: "0",
+          zIndex: 2
+        }}
+      >
+      <CloudBackground /></div>
+
       <Road sidewalkTopRef={sidewalkTopRef} sidewalkBottomRef={sidewalkBottomRef} />
 
       {/* Walking person */}
-      <div style={{
-        position: "absolute", bottom: 80, left: "50%",
+      <div className="lottie-wrapper" 
+      style={{
+        position: "absolute", bottom: "8%", left: "50%",
         transform: "translateX(-50%)", zIndex: 3
       }}>
         <Lottie
@@ -215,16 +230,53 @@ export default function JourneyScene() {
           animationData={walkingPersonData}
           loop
           autoplay={false}
-          style={{ width: 120, height: 120 }}
+          style={{ width: "100%", height: "15vh" }}
         />
       </div>
 
+      <div
+        style={{
+          position: "absolute",
+          top: "10%",
+          right: "8%",
+          width: "min(120px,20vw)",
+          aspectRatio: "1",
+          background: "radial-gradient(circle, #fff5cc, #ffd700)",
+          borderRadius: "50%",
+          boxShadow: "0 0 60px rgba(255, 255, 200, 0.6)",
+          zIndex: 1
+        }}
+      ></div>
+
       {/* Header */}
-      <span className="section-label" style={{ position: "absolute", top: 15, left: 40, zIndex: 10 }}>TIMELINE</span>
-      <h2 className="section-title" style={{ position: "absolute", top: 72, left: 40, zIndex: 10 }}>My Academic Journey</h2>
-      <p className="section-desc" style={{ position: "absolute", top: 150, left: 40, zIndex: 10, maxWidth: 400 }}>
-        A visual story of my academic and tech adventure, from school to Bennett University.
-      </p>
+        <span className="section-label"
+          style={{
+            position: "absolute",
+            marginTop: "35px",
+            marginLeft: "60px",
+          }}>
+          TIMELINE
+        </span>
+        <h2 className="section-title"
+          style={{
+            position: "absolute",
+            paddingLeft: "8vw",
+            top: "8vh",
+            fontSize: "min(5vw,2.2rem)", // resizes with screen
+            maxWidth: "80vw"
+          }}>
+          My Academic Journey
+        </h2>
+        <p className="section-desc"
+          style={{
+            position: "absolute",
+            top: "16vh",
+            paddingLeft: "8vw",
+            fontSize: "min(1.1rem,3vw)",
+            maxWidth: "60vw"
+          }}>
+          A visual story of my academic and tech adventure, from school to Bennett University.
+        </p>
 
       {/* Scroll prompt */}
       <div
@@ -233,8 +285,8 @@ export default function JourneyScene() {
           left: "30%",
           bottom: "8%",
           zIndex: 20,
-          width: 800,
-          height: 800,
+          width: "50%",
+          height: "85%",
           pointerEvents: "none",
           opacity: 1 - scrollX / (sectionSpacing * 0.5),
           transition: "opacity 0.5s",
@@ -248,7 +300,7 @@ export default function JourneyScene() {
       <div ref={cardsRowRef} style={{ position: "absolute", height: "100%", display: "flex", alignItems: "center" }}>
         {journeyCards.map((card, i) => {
           const cardX = (i-0.5) * sectionSpacing - scrollX;
-          const viewportCenter = windowWidth -(2600-((i-0.5)*280)); // Adjusted for better centering
+          const viewportCenter = windowWidth -(windowWidth*1.7-((i-0.5)*(windowWidth*0.19))); // Adjusted for better centering
           const distanceFromCenter = Math.abs(cardX - viewportCenter);
           
           // Animation ranges (adjust these values)

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap');
+
+
 :root {
   --cyber-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
   --cyber-primary: #00f5ff;
@@ -9,10 +12,10 @@
 
 body {
   margin: 0;
-  background: var(--cyber-bg);
+  background: #111827;
   color: var(--color-text);
   min-height: 100vh;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -21,6 +24,50 @@ section {
   width: 100vw;
   min-height: 100vh;
   scroll-snap-align: start;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (min-width: 1536px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1800px) {
+    font-size: 20px;
+  }
+  @media (min-width: 2000px) {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    display: none !important;
+  }
+  .contact-right {
+    display: none !important;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .hero {
+    padding: max(13vh, 7vw) 0;
+  }
+  .contact-section {
+    padding: min(13vh, 7vw) 0;
+  }
+  .clouds-row {
+    display:none !important;
+  }
 }
 
 .navbar {
@@ -33,9 +80,9 @@ section {
 }
 
 .nav-container {
-  max-width: 1280px;
+  max-width: 98%;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 0.8% 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,27 +115,26 @@ section {
   text-shadow: 0 0 5px var(--cyber-glow);
 }
 
+/* Hero Section */
 .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: var(--cyber-bg);
   overflow: hidden;
 }
 
 .hero-content {
   text-align: center;
   z-index: 2;
-  max-width: 800px;
+  width: 75%;
   padding: 0 20px;
 }
 
 .hero-title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  margin-bottom: 24px;
+  font-size: clamp(1.8rem, min(6vh,6vw), 4rem);
+  margin-bottom: 2%;
   background: linear-gradient(45deg, var(--cyber-primary), var(--cyber-secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -107,9 +153,9 @@ section {
 }
 
 .hero-subtitle {
-  font-size: 1.25rem;
+  font-size: clamp(0.8rem, min(2.5vh,2.5vw), 1.5rem);
   color: var(--color-text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 2%;
 }
 
 .hero-cta {
@@ -123,10 +169,10 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 10px clamp(10px, 16px, 18px);
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: clamp(0.5rem, min(1.6vh,1.6vw), 1rem); 
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   border: none;
@@ -138,7 +184,6 @@ section {
 .btn--primary {
   background: var(--cyber-primary);
   color: #0a0a0a;
-  box-shadow: 0 0 20px var(--cyber-glow);
 }
 
 .btn--primary:hover {
@@ -161,15 +206,15 @@ section {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 32px;
+  bottom: -10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
 }
 
 .scroll-arrow {
-  width: 24px;
-  height: 24px;
+  width: clamp(12px, min(2.5vh,2.5vw), 24px);
+  height: clamp(12px, min(2.5vh,2.5vw), 24px);
   border: 2px solid var(--cyber-primary);
   border-left: none;
   border-top: none;
@@ -184,7 +229,6 @@ section {
 }
 
 
-
 /* style.css */
 
 .journey-container {
@@ -197,23 +241,15 @@ section {
 /*clouds at phase 2*/
 .clouds-row {
   position: absolute;
-  margin-top: 400px;
+  margin-top: 0;
   left: 0;
-  width: 100vw;
-  height: 16vh; /* a bit taller than the cloud height */
+  width: 100%;
+  height: 100; /* a bit taller than the cloud height */
   z-index: 1;
   pointer-events: none;
   overflow: hidden;
   display: block;
 }
-
-.clouds-row__item {
-  position: absolute;
-  /* left, width, height, and top set via inline style */
-  opacity: 0.4;
-}
-
-
 
 /*road at phase 2*/
 /* styles/style.css - Add these optimizations */
@@ -221,8 +257,8 @@ section {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100vw;
-  height: 150px;
+  width: 100%;
+  height: 15%;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -231,8 +267,8 @@ section {
 }
 
 .sidewalk {
-  height: 20px;
-  width: 100vw;
+  height: 13%;
+  width: 100%;
   background: repeating-linear-gradient(
     to right,
     #5a6c7a 0 60px,
@@ -252,8 +288,8 @@ section {
 
 .road-main {
   position: relative;
-  width: 100vw;
-  height: 80px;
+  width: 100%;
+  height: 60%;
   background: linear-gradient(to bottom, #495e6e 0%, #374a5e 100%);
   overflow: hidden; /* Clip stripes that go outside */
 }
@@ -262,14 +298,14 @@ section {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 300vw; /* Extra width for seamless loop */
+  width: 100%; /* Extra width for seamless loop */
   height: 0;
   transform: translateY(-50%);
 }
 
 .stripe {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 8px;
   background: #ffe04c;
   border-radius: 3px;
@@ -281,8 +317,8 @@ section {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 100vw;
-  height: 8px;
+  width: 100%;
+  height: 10%;
   background: #ffe04c;
   border-radius: 3px;
   transform: translateY(-50%);
@@ -291,8 +327,6 @@ section {
 }
 
 /*road at phase 2*/
-
-
 /*text message at phase 2*/
 
 .section-header {
@@ -304,7 +338,8 @@ section {
   text-align: left;
 }
 
-.section-label {    
+.section-label {  
+  position: absolute;  
   margin-left: 80px;
   margin-top: 20px;
   color: var(--color-text-secondary);
@@ -361,13 +396,6 @@ section {
   z-index: 20;
 }
 
-.car {
-  position: absolute;
-  bottom: 80px;
-  right: 100px;
-  z-index: 3;
-}
-
 /* Fullpage sections */
 .fullpage-section {
   height: 100vh;
@@ -385,11 +413,69 @@ section {
 /* Projects Section */
 .projects-section {
   position: relative;
-  height: 100vh;
-  overflow-y: auto;
+  min-height: 100vh;
+  overflow: hidden;
   scroll-snap-align: start;
-  background: var(--cyber-bg);
+}
+
+.project-fade {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  transition: opacity 0.7s cubic-bezier(.16,1,.3,1);
+  z-index: 2;
+}
+.project-fade.show {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 3;
 }
 
 
+.imagination-title {
+  color: #fff !important;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  max-width: 100%;
+  font-family: 'Montserrat';
+}
 
+.project-image-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: #15171a;
+}
+
+.project-image-container .project-image {
+  transition: transform 0.4s cubic-bezier(.16,1,.3,1);
+  will-change: transform;
+}
+
+.project-image-container:hover .project-image,
+.project-image-container:focus .project-image {
+  transform: scale(1.08);
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.contact-card {
+  margin:2%;
+  width: 90%;
+  padding: 0% 0%;
+  display: flex;
+  align-items: center;
+}

@@ -1,32 +1,85 @@
-// src/sections/ProjectsSection/ProjectsSection.jsx
-
-"use client";
 "use client";
 
-import React from "react";
-import StarBackground from "../../components/StarBackground"; // Adjust path if needed
+import React, { useEffect, useState } from "react";
+import { projects } from "../../data/projects";
+import { FeaturedProjectCard } from "./FeaturedProjectCard";
+import { ProjectCard } from "./ProjectCard";
 import "../../styles/style.css";
 
 export default function ProjectsSection() {
+  // SSR-safe mobile detection
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Only run on client
+    const checkMobile = () => setIsMobile(window.innerWidth <= 767);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  let cards;
+  if (isMobile) {
+    // MOBILE: All projects as full-width ProjectCard
+    cards = projects.map((project) => (
+      <div key={project.id} className="w-full mb-8">
+        <ProjectCard project={project} />
+      </div>
+    ));
+  } else {
+    // DESKTOP: 1 featured, 2 half, repeat
+    cards = [];
+    for (let i = 0; i < projects.length; ) {
+      if (projects[i].featured) {
+        cards.push(
+          <div key={projects[i].id} className="mb-20">
+            <FeaturedProjectCard project={projects[i]} />
+          </div>
+        );
+        i++;
+      } else {
+        cards.push(
+          <div key={`row-${i}`} className="flex flex-col md:flex-row gap-8 mb-12">
+            <div className="w-full md:w-1/2">
+              <ProjectCard project={projects[i]} />
+            </div>
+            {projects[i + 1] && (
+              <div className="w-full md:w-1/2">
+                <ProjectCard project={projects[i + 1]} />
+              </div>
+            )}
+          </div>
+        );
+        i += 2;
+      }
+    }
+  }
+
   return (
     <section
-      className="projects-section"
-      style={{
-        position: "relative",
-        height: "100vh",
-        overflow: "hidden",
-        background: "var(--cyber-bg)", // matches your theme
-      }}
+      className="px-4 md:px-16 py-16 min-h-screen"
+      id="projects"
+      style={{ background: "#111827" }}
     >
-      {/* Star Background */}
-      <StarBackground />
-
-      {/* Fixed "My Projects" header */}
-      <span className="section-label" style={{ position: "absolute", top: 15, left: 40, zIndex: 10 }}>PROJECTS</span>
-      <h2 className="section-title" style={{ position: "absolute", top: 72, left: 40, zIndex: 10 }}>My Works</h2>
-
-
-      {/* Future project cards container here */}
+      <span className="section-label" style={{ marginLeft:"60px",marginTop: "-35px" }}>
+        PROJECTS
+      </span>
+      <h2
+        className="section-title imagination-title mb-12 text-center mx-auto"
+        style={{
+          color: "#fff",
+          fontSize: "min(3.6rem,10vw)",
+          fontWeight: 800,
+          letterSpacing: "-0.02em",
+          margin: "60px auto 3rem auto",
+          lineHeight: 1.1,
+          maxWidth: "100%",
+          paddingLeft: 0,
+        }}
+      >
+        Imagination At Work!
+      </h2>
+      {cards}
     </section>
   );
 }

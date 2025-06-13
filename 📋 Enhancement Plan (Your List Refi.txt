@@ -1,0 +1,37 @@
+📋 Enhancement Plan (Your List Refined)
+🛠️ Technical Improvements
+📱 Accessibility
+ Add aria-label to animated canvas backgrounds (StarBackground, CloudBackground)
+
+ Support prefers-reduced-motion via matchMedia
+
+ Keyboard nav test: tab through Navbar and focus-visible styles
+
+⚡ Performance
+ Lazy-load Lottie/3D animations
+
+ Use IntersectionObserver to trigger animation only on scroll
+
+ Optimize images/icons (e.g., next/image, SVG sprite, compression)
+
+🧩 Code Organization
+ Move animation configs to /constants/animations.js
+
+ Create custom hooks (e.g., useScrollTrigger, useCanvasResize)
+
+ Add TypeScript support (*.tsx, tsconfig.json setup)
+
+🌐 Content & SEO
+🔍 SEO & Meta
+ Add Open Graph + Twitter meta tags
+
+ Use <main>, <section>, <article> for semantic HTML
+
+ Integrate Lighthouse for performance testing
+
+✍️ Content Strategy
+ Project details: Add role, tech, outcomes
+
+ Case studies for main projects
+
+ Add blog support (e.g., /blog route using MDX or Notion CMS)

@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 
 export default function StarBackground() {
@@ -11,7 +13,7 @@ export default function StarBackground() {
     canvas.width = width;
     canvas.height = height;
 
-    const particles = Array.from({ length: 80 }, () => ({
+    const particles = Array.from({ length: 30 }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
       r: Math.random() * 1.7 + 0.8,

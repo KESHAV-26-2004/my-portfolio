@@ -35,70 +35,69 @@ export default function CloudBackground({ className = "", style = {} }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const container = containerRef.current;
     const canvas = canvasRef.current;
+    const container = containerRef.current;
     const ctx = canvas.getContext("2d");
 
-    // Set canvas size to container size (not window)
-    function resizeCanvas() {
-      canvas.width = container.offsetWidth;
-      canvas.height = container.offsetHeight;
-    }
-    resizeCanvas();
+    const CLOUDS = 10;
+    const moonRadius = 60;
+    let moonX = 0;
+    let moonY = 0;
+    let width = 0;
+    let height = 0;
+    let clouds = [];
 
-    // Generate cloud particles
-    const CLOUDS = 12;
-    let width = canvas.width;
-    let height = canvas.height;
-    let scaleFactor = Math.min(width, height) / 1000; // Scale factor based on container size
-    // Clouds start with random positions and properties
-    let clouds = Array.from({ length: CLOUDS }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * (height / 2) * 0.35, // top 35% of section
-      scale: (Math.random() * 0.6 + 0.6)* scaleFactor, // Scale based on container size
-      speed: Math.random() * 0.15 + 0.15,
-      opacity: Math.random() * 0.3 + 0.28,
-    }));
+    function updateMoonPosition() {
+      moonX = width * 0.85;
+      moonY = height * 0.20;
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      width = container.offsetWidth;
+      height = container.offsetHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      updateMoonPosition();
+
+      // Recreate clouds on resize
+      clouds = Array.from({ length: CLOUDS }, () => ({
+        x: Math.random() * width,
+        y: Math.random() * (height / 2) * 0.35,
+        scale: Math.random() * 0.6 + 0.6,
+        speed: Math.random() * 0.15 + 0.15,
+        opacity: Math.random() * 0.3 + 0.28,
+      }));
+    }
 
     function animate() {
-      width = canvas.width;
-      height = canvas.height;
       ctx.clearRect(0, 0, width, height);
 
-      // 2. Draw all clouds (some may overlap the moon)
+      // 1. Draw moon
+      drawMoon(ctx, moonX, moonY, moonRadius);
+
+      // 2. Draw and move clouds
       clouds.forEach(cloud => {
         drawCloud(ctx, cloud.x, cloud.y + 250, cloud.scale, cloud.opacity);
-      });
-
-      // 3. Draw clouds that are in front of the moon (i.e., overlapping area)
-      {/*clouds.forEach(cloud => {
-        // Compute cloud center
-        const cx = cloud.x + 40 * cloud.scale;
-        const cy = cloud.y + 250;
-        // If cloud center is within moon radius, redraw cloud (over the moon)
-        const dist = Math.hypot(cx - moonX, cy - moonY);
-        if (dist < moonRadius + 40 * cloud.scale) {
-          // Draw again, this time "over" the moon
-          drawCloud(ctx, cloud.x, cloud.y + 250, cloud.scale, cloud.opacity);
-        }
-      });*/}
-
-      // Move clouds
-      clouds.forEach(cloud => {
         cloud.x += cloud.speed;
-        if (cloud.x - 100 * cloud.scale > width) {
+
+        if (cloud.x - 160 * cloud.scale > width) {
           cloud.x = -120 * cloud.scale;
           cloud.y = Math.random() * height * 0.15;
-          cloud.scale = (Math.random() * 0.6 + 0.6) * scaleFactor;
+          cloud.scale = Math.random() * 0.6 + 0.6;
           cloud.opacity = Math.random() * 0.3 + 0.28;
         }
       });
 
       requestAnimationFrame(animate);
     }
-    animate();
 
-    // Resize on section resize
+    resizeCanvas();
+    animate();
     window.addEventListener("resize", resizeCanvas);
     return () => window.removeEventListener("resize", resizeCanvas);
   }, []);

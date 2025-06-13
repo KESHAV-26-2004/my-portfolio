@@ -50,20 +50,27 @@ export default function CloudBackground({ className = "", style = {} }) {
     const CLOUDS = 12;
     let width = canvas.width;
     let height = canvas.height;
-    let scaleFactor = Math.min(width, height) / 1000; // Scale factor based on container size
     // Clouds start with random positions and properties
     let clouds = Array.from({ length: CLOUDS }, () => ({
       x: Math.random() * width,
       y: Math.random() * (height / 2) * 0.35, // top 35% of section
-      scale: (Math.random() * 0.6 + 0.6)* scaleFactor, // Scale based on container size
+      scale: Math.random() * 0.6 + 0.6,
       speed: Math.random() * 0.15 + 0.15,
       opacity: Math.random() * 0.3 + 0.28,
     }));
+
+    // Moon position and size (fixed)
+    const moonX = width * 0.85;
+    const moonY = height * 0.20;
+    const moonRadius = 60;
 
     function animate() {
       width = canvas.width;
       height = canvas.height;
       ctx.clearRect(0, 0, width, height);
+
+      // 1. Draw the moon first (background)
+      drawMoon(ctx, moonX, moonY, moonRadius);
 
       // 2. Draw all clouds (some may overlap the moon)
       clouds.forEach(cloud => {
@@ -89,7 +96,7 @@ export default function CloudBackground({ className = "", style = {} }) {
         if (cloud.x - 100 * cloud.scale > width) {
           cloud.x = -120 * cloud.scale;
           cloud.y = Math.random() * height * 0.15;
-          cloud.scale = (Math.random() * 0.6 + 0.6) * scaleFactor;
+          cloud.scale = Math.random() * 0.6 + 0.6;
           cloud.opacity = Math.random() * 0.3 + 0.28;
         }
       });

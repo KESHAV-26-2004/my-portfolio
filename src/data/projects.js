@@ -1,0 +1,73 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Go Up Game",
+    description: "Vertical platformer built with Python & Pygame.",
+    image: "/images/goup.png",
+    feature: "Blocks Game",
+    featured: true,
+    skills: ["python", "pygame"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/goup-game"
+  },
+  {
+    id: 2,
+    title: "Clinic Management System",
+    description: "Java Swing desktop app for clinics.",
+    image: "/images/clinic.png",
+    featured: false,
+    skills: ["java", "netbeans", "mysql"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/clinic-management"
+  },
+  {
+    id: 3,
+    title: "Go Up AI",
+    description: "AI agent for Go Up game using RL.",
+    image: "/images/goupai.webp",
+    featured: false,
+    skills: ["python", "ai"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/goup-ai"
+  },
+  {
+    id: 4,
+    title: "Laundry App",
+    description: "Flutter app for university laundry services, with real-time order tracking.",
+    image: "/images/laundry.png",
+    featured: true,
+    skills: ["flutter", "dart", "firebase"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/laundry-app"
+  },
+  {
+    id: 5,
+    title: "AI Assistant in Laundry App",
+    description: "Integrated AI assistant using Flan, Flask, Ngrok to enhance the Laundry App.",
+    image: "/images/laundry-ai.png",
+    featured: false,
+    skills: ["flutter", "huggingface", "flask"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/laundry-ai"
+  },
+  {
+    id: 6,
+    title: "Dentist App",
+    description: "React Native app for dental clinics. (Ongoing)",
+    image: "/images/dentist.png",
+    featured: false,
+    skills: ["react", "expo"],
+    demo: "https://your-demo-link",
+    github: "https://github.com/yourusername/dentist-app"
+  },
+  {
+    id: 7,
+    title: "Portfolio Website",
+    description: "This portfolio, built with React and modern CSS.",
+    image: "/images/portfolio.png",
+    featured: true,
+    skills: ["react", "css", "nextjs", "tailwind"],
+    demo: "https://your-portfolio-link",
+    github: "https://github.com/yourusername/portfolio"
+  }
+];
