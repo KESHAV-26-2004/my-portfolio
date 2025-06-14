@@ -4,7 +4,7 @@ import React from "react";
 import { Github} from "../assets/AllSvgs";
 
 const SOCIALS = [
-  { name: "LinkedIn", icon: "/alinkedin.svg", url: "https://linkedin.com/in/yourprofile" },
+  { name: "LinkedIn", icon: "/alinkedIn.svg", url: "https://linkedin.com/in/yourprofile" },
   { name: "Instagram", icon: "/instagram.svg", url: "https://instagram.com/yourusername" },
   // Add more as needed
 ];
