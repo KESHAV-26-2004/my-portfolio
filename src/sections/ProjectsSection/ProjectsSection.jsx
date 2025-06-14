@@ -61,7 +61,7 @@ export default function ProjectsSection() {
       id="projects"
       style={{ background: "#111827" }}
     >
-      <span className="section-label" style={{ marginLeft:"60px",marginTop: "-35px" }}>
+      <span className="section-label projects" style={{ marginLeft:"60px",marginTop: "0px" }}>
         PROJECTS
       </span>
       <h2

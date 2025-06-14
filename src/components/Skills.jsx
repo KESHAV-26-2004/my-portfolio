@@ -51,7 +51,7 @@ const skillGroups = [
 function SkillCircle({ icon, name, level, tip }) {
   return (
     <div
-      className="group relative flex flex-col items-center justify-center"
+      className="group skill-circle relative flex flex-col items-center justify-center"
       style={{ width: "78px", height: "78px", margin: "0.6rem" }}
       tabIndex={0}
     >
@@ -66,7 +66,7 @@ function SkillCircle({ icon, name, level, tip }) {
         })}
       >
         {/* Not using children here, icon is outside */}
-      <img
+      <img className="skills-icon-size"
         src={icon}
         alt={name}
         style={{
@@ -139,7 +139,7 @@ export default function Skills() {
       </p>
       <div className="skills-groups" style={{ display: "flex", flexWrap: "wrap", gap: "36px 64px" }}>
         {skillGroups.map(group => (
-          <div key={group.label} style={{ minWidth: 300 }}>
+          <div key={group.label} style={{ minWidth: "auto" }}>
             <h3 style={{
               color: "white",
               fontWeight: 700,

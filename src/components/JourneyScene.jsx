@@ -84,11 +84,11 @@ function JourneyCard({ card, style, isActive }) {
     >
       <h3 style={{
         color: "var(--cyber-primary)",
-        fontSize: "min(2.5vw,2.5vh)",
+        fontSize: "min(3.5vw,2.5vh)",
         marginBottom: 8,
         fontWeight: 700
       }}>{card.title}</h3>
-      <div style={{ color: "var(--color-text-secondary)", fontSize: "min(1.45vw,1.45vh)", marginBottom: 18 }}>
+      <div style={{ color: "var(--color-text-secondary)", fontSize: "min(2.45vw,1.45vh)", marginBottom: 18 }}>
         {card.period}
       </div>
       <div style={{ marginBottom: 12, display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "flex-start"}}>
@@ -97,7 +97,7 @@ function JourneyCard({ card, style, isActive }) {
             background: "rgba(0,245,255,0.08)",
             borderRadius: 6,
             padding: "6px 14px",
-            fontSize: "min(1.6vw,1.6vh)",
+            fontSize: "min(2.6vw,1.6vh)",
             color: "var(--cyber-primary)",
             border: "1px solid rgba(0,245,255,0.13)",
             display: "inline-block",
@@ -109,7 +109,7 @@ function JourneyCard({ card, style, isActive }) {
       </div>
       <div style={{
         color: "var(--color-text-secondary)",
-        fontSize: "min(1.6vw,1.6vh)",
+        fontSize: "min(2.6vw,1.6vh)",
         marginTop: 10
       }}>
         {card.description}
@@ -249,10 +249,10 @@ export default function JourneyScene() {
       ></div>
 
       {/* Header */}
-        <span className="section-label"
+        <span className="section-label journey"
           style={{
             position: "absolute",
-            marginTop: "35px",
+            marginTop: "30px",
             marginLeft: "60px",
           }}>
           TIMELINE
@@ -261,18 +261,19 @@ export default function JourneyScene() {
           style={{
             position: "absolute",
             paddingLeft: "8vw",
-            top: "8vh",
-            fontSize: "min(5vw,2.2rem)", // resizes with screen
+            top: "7vh",
+            fontSize: "min(4.5vw,4.5vh)", // resizes with screen
             maxWidth: "80vw"
+            
           }}>
           My Academic Journey
         </h2>
         <p className="section-desc"
           style={{
             position: "absolute",
-            top: "16vh",
+            top: "15vh",
             paddingLeft: "8vw",
-            fontSize: "min(1.1rem,3vw)",
+            fontSize: "min(2.5vh,2.5vw)",
             maxWidth: "60vw"
           }}>
           A visual story of my academic and tech adventure, from school to Bennett University.

@@ -77,7 +77,7 @@ export function FeaturedProjectCard({ project }) {
           <p className="text-lg text-gray-300 mb-5">{project.description}</p>
           
           {/* Bottom Row: GitHub, Skills, Visit */}
-          <div className="flex items-center gap-4 mt-4">
+          <div className="flex flex-wrap items-center gap-4 mt-4">
             {/* GitHub Icon */}
             <a
               href={project.github}

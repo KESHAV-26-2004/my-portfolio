@@ -29,7 +29,6 @@ export default function SmileQuoteSection() {
       ref={sectionRef}
       style={{
         minHeight: "70vh",
-        background: "#111827",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

@@ -17,7 +17,6 @@ body {
   min-height: 100vh;
   font-family: 'Inter', 'Montserrat', 'Segoe UI', Arial, sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 section {
@@ -56,6 +55,28 @@ html {
   .contact-right {
     display: none !important;
   }
+  .section-title {
+    font-size: 1.3rem !important;
+  }
+  .section-desc {
+    font-size: 1rem !important;
+    max-width: 70vw !important;
+  }
+  .section-label.projects {
+    margin-left: 0px !important; /* or whatever value you want for mobile */
+    padding:40px!important;  /* adjust as needed */
+  }
+  .skill-circle {
+    margin:0rem !important;
+    width: 65px !important;
+  }
+  .section-label.journey {
+    margin-left: 30px !important; /* or whatever value you want for mobile */
+  }
+  .skills-icon-size{
+    width: min(58px,15vw) !important;
+    height: min(58px,15vw) !important;
+  }
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -67,6 +88,9 @@ html {
   }
   .clouds-row {
     display:none !important;
+  }
+  .section-label.journey {
+    display: none !important; /* or whatever value you want for desktop */
   }
 }
 

@@ -18,9 +18,9 @@ export default function ContactSection() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        padding: 0,
       }}
     >
+      {/* Main Card Container */}
       <div className="contact-card"
         style={{
           position: "relative",
@@ -120,7 +120,7 @@ export default function ContactSection() {
                 borderRadius: "14px",
                 padding: "0.9em 1.2em",
                 color: "#fff",
-                fontSize: "min(1rem,4vw)",
+                fontSize: "min(1rem,3.5vw)",
                 marginBottom: 8,
                 outline: "none",
               }}
@@ -134,7 +134,7 @@ export default function ContactSection() {
                 borderRadius: "14px",
                 padding: "0.9em 1.2em",
                 color: "#fff",
-                fontSize: "min(1rem,4vw)",
+                fontSize: "min(1rem,3.5vw)",
                 marginBottom: 8,
                 outline: "none",
               }}
@@ -147,7 +147,7 @@ export default function ContactSection() {
                 borderRadius: "14px",
                 padding: "0.9em 1.2em",
                 color: "#fff",
-                fontSize: "min(1rem,4vw)",
+                fontSize: "min(1rem,3.5vw)",
                 minHeight: "80px",
                 marginBottom: 8,
                 outline: "none",
@@ -159,6 +159,7 @@ export default function ContactSection() {
             justifyContent: "center",
             gap: "16px",
             marginTop: 16,
+            marginBottom: "1.5rem",
             }}>
             <button
                 type="submit"
@@ -224,7 +225,7 @@ export default function ContactSection() {
               <img src="/Innerblob.svg" style={{
                 position: "absolute",
                 width: "100%",
-                bottom: "-37%",
+                bottom: "-47%",
                 right: "-6%",
                 zIndex: 1,
               }} />
@@ -233,7 +234,7 @@ export default function ContactSection() {
               <img src="/Outerblob.svg" style={{
                 position: "absolute",
                 width: "82%",
-                bottom: "-26%",
+                bottom: "-36%",
                 right: "0",
                 zIndex: 0,
                 transform: "rotate(6deg) scale(1.3)",
@@ -245,7 +246,7 @@ export default function ContactSection() {
                 style={{
                   position: "absolute",
                   width: "108%",
-                  bottom: "-45.2%",
+                  bottom: "-55.2%",
                   right: "-14.2%",
                   zIndex: 2,
                 }}
@@ -276,7 +277,7 @@ export default function ContactSection() {
                 style={{
                   position: "absolute",
                   width: "83.2%",
-                  bottom: "22.5%",
+                  bottom: "12.5%",
                   left: "14.5%",
                   zIndex: 3,
                 }}
@@ -289,7 +290,7 @@ export default function ContactSection() {
         <div style={{
         textAlign: "center",
         color: "#fff",
-        margin: "1.5rem",
+        padding: "1.5rem 0",
         fontSize: "min(1.3rem,5vw)",
         opacity: 0.7,
         letterSpacing: "0.01em"

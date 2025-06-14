@@ -47,7 +47,7 @@ export default function CloudBackground({ className = "", style = {} }) {
     resizeCanvas();
 
     // Generate cloud particles
-    const CLOUDS = 12;
+    const CLOUDS = 10;
     let width = canvas.width;
     let height = canvas.height;
     let scaleFactor = Math.min(width, height) / 1000; // Scale factor based on container size
@@ -67,7 +67,7 @@ export default function CloudBackground({ className = "", style = {} }) {
 
       // 2. Draw all clouds (some may overlap the moon)
       clouds.forEach(cloud => {
-        drawCloud(ctx, cloud.x, cloud.y + 250, cloud.scale, cloud.opacity);
+        drawCloud(ctx, cloud.x, cloud.y + 200, cloud.scale, cloud.opacity);
       });
 
       // 3. Draw clouds that are in front of the moon (i.e., overlapping area)
