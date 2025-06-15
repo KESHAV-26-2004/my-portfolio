@@ -14,7 +14,7 @@ export function FeaturedProjectCard({ project }) {
     <div
       className="relative mb-18"
       style={{
-        height: "480px", // fixed height for landscape card
+        height: "520px", // fixed height for landscape card
         width: "100%",
         borderTop: `${borderTop}px solid #fff`,
         borderLeft: `${borderSides}px solid #fff`,

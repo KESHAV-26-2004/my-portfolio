@@ -14,7 +14,7 @@ export function ProjectCard({ project }) {
     <div
       className="relative mb-8"
       style={{
-        height: "500px", // full height for flex layout
+        height: "520px", // full height for flex layout
         borderTop: `${borderTop}px solid #fff`,
         borderLeft: `${borderSides}px solid #fff`,
         borderRight: `${borderSides}px solid #fff`,
