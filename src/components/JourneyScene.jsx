@@ -84,11 +84,11 @@ function JourneyCard({ card, style, isActive }) {
     >
       <h3 style={{
         color: "var(--cyber-primary)",
-        fontSize: "min(3.5vw,2.5vh)",
+        fontSize: "min(3.8vw,2.8vh)",
         marginBottom: 8,
         fontWeight: 700
       }}>{card.title}</h3>
-      <div style={{ color: "var(--color-text-secondary)", fontSize: "min(2.45vw,1.45vh)", marginBottom: 18 }}>
+      <div style={{ color: "var(--color-text-secondary)", fontSize: "min(2.6vw,1.6vh)", marginBottom: 18 }}>
         {card.period}
       </div>
       <div style={{ marginBottom: 12, display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "flex-start"}}>
@@ -97,7 +97,7 @@ function JourneyCard({ card, style, isActive }) {
             background: "rgba(0,245,255,0.08)",
             borderRadius: 6,
             padding: "6px 14px",
-            fontSize: "min(2.6vw,1.6vh)",
+            fontSize: "min(3vw,2vh)",
             color: "var(--cyber-primary)",
             border: "1px solid rgba(0,245,255,0.13)",
             display: "inline-block",
@@ -109,7 +109,7 @@ function JourneyCard({ card, style, isActive }) {
       </div>
       <div style={{
         color: "var(--color-text-secondary)",
-        fontSize: "min(2.6vw,1.6vh)",
+        fontSize: "min(3vw,2vh)",
         marginTop: 10
       }}>
         {card.description}

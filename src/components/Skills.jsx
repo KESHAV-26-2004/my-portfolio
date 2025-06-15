@@ -70,8 +70,8 @@ function SkillCircle({ icon, name, level, tip }) {
         src={icon}
         alt={name}
         style={{
-          width: "min(68px,15vw)",
-          height: "min(68px,15vw)",
+          width: "min(72px,15vw)",
+          height: "min(72px,15vw)",
           position: "absolute",
           left: "20%",
           top: "50%",
