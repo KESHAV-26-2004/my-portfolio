@@ -1,0 +1,22 @@
+## Custom License
+
+Copyright (c) 2025 Keshav Verma
+
+This software is provided **free of charge for use by individuals**.
+
+**However:**
+
+- You may NOT distribute, publish, sublicense, or sell copies of the Software without
+  obtaining explicit permission from the author.
+- To request permission or discuss usage, please reach out to me directly:
+
+  - [Instagram](https://instagram.com/YOUR_USERNAME)
+  - [LinkedIn](https://www.linkedin.com/in/YOUR_PROFILE_LINK)
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.**
