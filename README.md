@@ -34,4 +34,10 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## A note on re-sharing
 
-While we appreciate creativity and sharing knowledge, we would appreciate proper attribution to the original authors. Please retain the license and attribution if you reuse or modify this portfolio. Happy coding! 🚀
+While we appreciate creativity and sharing knowledge, we would appreciate proper attribution to the original authors.
+Please retain the license and attribution if you distribue or publish this portfolio.
+If you wish to distrubute or publish this portfolio, please reach out to me directly first:
+
+Instagram
+
+LinkedIn
