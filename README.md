@@ -28,8 +28,9 @@ Open http://localhost:3000 with your browser to see the result.
 
 Forked or Inspired by
 
-Ayush Singh's Folio — for portfolio structure and style.
-codebucks27 — for the initial portfolio template, from this project.
+[Ayush Singh's Folio](https://ayushsingh.co.in/#home) — for portfolio structure and style.
+
+[codebucks27](https://minimal-nextjs-portfolio-website.vercel.app/projects) — for the initial portfolio template, from this project.
 
 A note on re-sharing
 While we appreciate creativity and sharing knowledge, we would appreciate proper attribution to the original authors. Please retain the license and attribution if you reuse or modify this portfolio. Happy coding! 🚀
