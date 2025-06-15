@@ -2,28 +2,34 @@
 
 ## Keshav's DeveloperPortfolio
 
-[Live Demo](https://your-vercel-link.vercel.app/)  
+[Live Demo](https://your-vercel-portfolio.vercel.app/)  
 
 To showcase my portfolio — my skills, my work, and a bit about myself — in a visually rich format. 🚀
 
-## How did we create this?
+## How did I create this?
 
-1. UI/UX was designed by researching portfolios from awwards, adding our own flavor.
-2. The project is implemented with [React](https://reactjs.org/) and [Next.js](https://nextjs.org/) for a scalable and fast application.
-3. Animations and transitions are powered by CSS and [GSAP](https://greensock.com/gsap).
-4. The code is fully responsive and SEO-friendly.
-5. The portfolio components are designed to be easily editable and reusable.
+1. UI/UX was brainstormed using inspiration from [winning portfolios](https://www.awwwards.com/) and high-fidelity mockups designed in Figma.
+2. This project is implemented with [React](https://reactjs.org/) and [Next.js](https://nextjs.org/) for a scalable and fast application.
+3. Animations and transitions are powered by [GSAP](https://greensock.com/gsap).
+4. Card interactions were implemented with [Tilt.js](https://givans.net/tilt.js).
+5. The timeline section was constructed with HTML/SVGs and enhanced by GSAP animations.
+6. Animations, layer management, repaints, and reflows were optimised using Chrome Developer Tools.
 
-## How to run on your local machine?
+## How to run on local?
 
-Start the development server:
+First, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-Open http://localhost:3000 in your browser to view the portfolio.
 ```
-A note on sharing or forking
-This portfolio is a reflection of my creativity and coding skills.
-If you wish to reuse or modify it for your own portfolio, please give proper attribution by retaining the license and adding a link back to this repository.
+Open http://localhost:3000 with your browser to see the result.
+
+Forked or Inspired by
+Ayush Singh's Folio — for portfolio structure and style.
+
+codebucks27 — for the initial portfolio template, from this project.
+
+A note on re-sharing
+While we appreciate creativity and sharing knowledge, we would appreciate proper attribution to the original authors. Please retain the license and attribution if you reuse or modify this portfolio. Happy coding! 🚀
