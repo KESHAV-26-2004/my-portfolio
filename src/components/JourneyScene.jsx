@@ -196,6 +196,7 @@ export default function JourneyScene() {
   }, [windowWidth]);
 
   const sectionSpacing = 0.5 * windowWidth;
+  const activeIndex = Math.round(scrollX / sectionSpacing);
 
   return (
     <section
@@ -300,6 +301,7 @@ export default function JourneyScene() {
       {/* Card row with absolute cards */}
       <div ref={cardsRowRef} style={{ position: "absolute", height: "100%", display: "flex", alignItems: "center" }}>
         {journeyCards.map((card, i) => {
+          if (Math.abs(i - activeIndex) > 2) return null;
           const cardX = (i-0.5) * sectionSpacing - scrollX;
           const viewportCenter = windowWidth -(windowWidth*1.7-((i-0.5)*(windowWidth*0.19))); // Adjusted for better centering
           const distanceFromCenter = Math.abs(cardX - viewportCenter);
