@@ -23,3 +23,7 @@ npm run dev
 # or
 yarn dev
 Open http://localhost:3000 in your browser to view the portfolio.
+```
+A note on sharing or forking
+This portfolio is a reflection of my creativity and coding skills.
+If you wish to reuse or modify it for your own portfolio, please give proper attribution by retaining the license and adding a link back to this repository.
