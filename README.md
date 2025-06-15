@@ -27,8 +27,8 @@ yarn dev
 Open http://localhost:3000 with your browser to see the result.
 
 Forked or Inspired by
-Ayush Singh's Folio — for portfolio structure and style.
 
+Ayush Singh's Folio — for portfolio structure and style.
 codebucks27 — for the initial portfolio template, from this project.
 
 A note on re-sharing
