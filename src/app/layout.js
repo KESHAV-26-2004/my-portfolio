@@ -5,11 +5,15 @@ import '../styles/style.css';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
+  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: 'swap', 
+  preload: true,
 });
 
 export const metadata = {
@@ -19,7 +23,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en"
+      suppressHydrationWarning="true"
+      data-qb-installed="true" >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
