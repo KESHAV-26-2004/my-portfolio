@@ -38,7 +38,7 @@ export default function HeroSection() {
       timeout = setTimeout(() => {
         setDisplayText(currentPhrase.substring(0, displayText.length + 1));
         if (displayText === currentPhrase) {
-          setTimeout(() => setIsDeleting(true), 1000);
+          setTimeout(() => setIsDeleting(true), 3000);
         }
       }, 100);
     } else {

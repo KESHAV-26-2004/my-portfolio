@@ -15,48 +15,49 @@ gsap.registerPlugin(ScrollTrigger);
 // Card data
 const journeyCards = [
   {
-    title: "School Years",
-    period: "2019-2023",
+    title: "📚 School Foundation",
+    period: "2020–2022",
     achievements: ["10th Grade: 92%", "12th Grade: 87%", "CBSE Board"],
-    description: "Strong academic foundation in science and mathematics"
+    description: "Built a strong academic foundation in Science and Mathematics."
   },
   {
-    title: "College Transition",
-    period: "Aug 2023",
-    achievements: ["JEE Main: 87 percentile", "Bennett University", "First coding experience"],
-    description: "Started Computer Science journey"
+    title: "🎯 College Entry & First Code",
+    period: "25-Aug 2023",
+    achievements: ["JEE Main: 87 percentile", "Joined Bennett University", "First exposure to programming"],
+    description: "Embarked on the Computer Science journey and discovered a passion for coding."
   },
   {
-    title: "1st Semester",
-    period: "Aug-Dec 2023",
-    achievements: ["Learned Python", "Go Up Game (Pygame)", "SGPA: 9.18"],
-    description: "First programming language and game development"
+    title: "💡 1st Semester – Python & Game Dev",
+    period: "Aug–Dec 2023",
+    achievements: ["Learned Python", "Built 'Go Up' Game", "SGPA: 9.18"],
+    description: "Explored programming through game development using Python and Pygame."
   },
   {
-    title: "2nd Semester",
-    period: "Jan-May 2024",
+    title: "💻 2nd Semester – Java & Databases",
+    period: "Jan–May 2024",
     achievements: ["Mastered Java & OOP", "MySQL Integration", "SGPA: 9.24"],
-    description: "Object-oriented programming and database systems"
+    description: "Focused on object-oriented programming and backend database systems."
   },
   {
-    title: "3rd Semester",
-    period: "Aug-Dec 2024",
+    title: "🧠 3rd Semester – AI & DSA",
+    period: "Aug–Dec 2024",
     achievements: ["AI/ML Specialization", "C++ & Data Structures", "SGPA: 9.12"],
-    description: "Advanced algorithms and artificial intelligence"
+    description: "Dived into artificial intelligence and algorithmic problem solving."
   },
   {
-    title: "4th Semester",
-    period: "Jan-May 2024",
-    achievements: ["Flutter Laundry App", "FLAN-T5 AI Chatbot", "Full-stack Development"],
-    description: "Mobile app development and AI integration"
+    title: "📱 4th Semester – Full Stack & AI Integration",
+    period: "Jan–May 2025",
+    achievements: ["Flutter Laundry App", "FLAN-T5 AI Chatbot", "Full-stack Dev"],
+    description: "Built real-world mobile apps and integrated AI using Flutter, Flask, and Firebase."
   },
   {
-    title: "Current Phase",
+    title: "🚀 Current Phase – Web Dev & UI/UX",
     period: "Summer 2025",
-    achievements: ["Learning React/Next.js", "Dentist Clinic App", "Portfolio Development"],
-    description: "Modern web development and professional portfolio"
+    achievements: ["Learning React/Next.js", "Dentist Clinic App", "Developer Portfolio"],
+    description: "Focusing on frontend technologies, design systems, and professional presentation."
   }
 ];
+
 
 function JourneyCard({ card, style, isActive }) {
   return (
@@ -196,6 +197,7 @@ export default function JourneyScene() {
   }, [windowWidth]);
 
   const sectionSpacing = 0.5 * windowWidth;
+  const activeIndex = Math.round(scrollX / sectionSpacing);
 
   return (
     <section
@@ -276,7 +278,7 @@ export default function JourneyScene() {
             fontSize: "min(2.5vh,2.5vw)",
             maxWidth: "60vw"
           }}>
-          A visual story of my academic and tech adventure, from school to Bennett University.
+          From classrooms to code — tracing my journey through key milestones and learning experiences.
         </p>
 
       {/* Scroll prompt */}
@@ -300,6 +302,7 @@ export default function JourneyScene() {
       {/* Card row with absolute cards */}
       <div ref={cardsRowRef} style={{ position: "absolute", height: "100%", display: "flex", alignItems: "center" }}>
         {journeyCards.map((card, i) => {
+          if (Math.abs(i - activeIndex) > 2) return null;
           const cardX = (i-0.5) * sectionSpacing - scrollX;
           const viewportCenter = windowWidth -(windowWidth*1.7-((i-0.5)*(windowWidth*0.19))); // Adjusted for better centering
           const distanceFromCenter = Math.abs(cardX - viewportCenter);

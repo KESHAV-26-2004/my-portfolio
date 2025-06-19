@@ -4,8 +4,8 @@ import React from "react";
 import { Github} from "../assets/AllSvgs";
 
 const SOCIALS = [
-  { name: "LinkedIn", icon: "/alinkedIn.svg", url: "https://linkedin.com/in/yourprofile" },
-  { name: "Instagram", icon: "/instagram.svg", url: "https://instagram.com/yourusername" },
+  { name: "LinkedIn", icon: "/alinkedIn.svg", url: "https://www.linkedin.com/in/keshav-80885b217" },
+  { name: "Instagram", icon: "/instagram.svg", url: "https://www.instagram.com/_verma__keshu_?igsh=MWh5YzQxcWwwczhmZg==" },
   // Add more as needed
 ];
 
@@ -42,7 +42,7 @@ export default function ContactSection() {
         }}>
             {/* GitHub Icon (React component) */}
         <a
-            href="https://github.com/yourusername"
+            href="https://github.com/KESHAV-26-2004"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -110,8 +110,14 @@ export default function ContactSection() {
           }}>
             Want to connect, collaborate, or just geek out about code? Send your message below and I’ll respond soon!
           </p>
-          <form style={{ display: "flex", flexDirection: "column", gap: 16, width: "100%" }}>
+          <form action="https://formsubmit.co/92de005b3b961d342cd7505b5e9b131e" method="POST"
+          style={{ display: "flex", flexDirection: "column", gap: 16, width: "100%" }}>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://my-portfolio-keshavs-projects-72997bdc.vercel.app/#contact" />
+            <input type="hidden" name="_autoresponse" value="Thanks for your message, Keshav will get back to you soon!" />
+
             <input
+              name="name"
               type="text"
               placeholder="Your Name"
               style={{
@@ -124,8 +130,10 @@ export default function ContactSection() {
                 marginBottom: 8,
                 outline: "none",
               }}
+              required
             />
             <input
+              name="email"
               type="email"
               placeholder="Your Email"
               style={{
@@ -138,8 +146,11 @@ export default function ContactSection() {
                 marginBottom: 8,
                 outline: "none",
               }}
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              required
             />
             <textarea
+              name="message"
               placeholder="Your Message"
               style={{
                 background: "#23272f",
@@ -153,6 +164,7 @@ export default function ContactSection() {
                 outline: "none",
                 resize: "vertical",
               }}
+              required
             />
             <div style={{
             display: "flex",

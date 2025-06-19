@@ -77,7 +77,7 @@ export default function ProjectsSection() {
           paddingLeft: 0,
         }}
       >
-        Imagination At Work!
+        Blueprints of a Curious Mind
       </h2>
       {cards}
     </section>

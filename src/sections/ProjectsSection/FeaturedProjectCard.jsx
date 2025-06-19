@@ -14,7 +14,7 @@ export function FeaturedProjectCard({ project }) {
     <div
       className="relative mb-18"
       style={{
-        height: "520px", // fixed height for landscape card
+        height: "auto", // fixed height for landscape card
         width: "100%",
         borderTop: `${borderTop}px solid #fff`,
         borderLeft: `${borderSides}px solid #fff`,
@@ -48,7 +48,8 @@ export function FeaturedProjectCard({ project }) {
         className="project-image-container group"
         style={{
             display: "block",
-            height: "100%",
+            aspectratio: 4/3,
+            height: "auto",
             width: "50%",
             overflow: "hidden",
             borderRadius: "1rem", // matches your card's rounded corners

@@ -14,7 +14,7 @@ export function ProjectCard({ project }) {
     <div
       className="relative mb-8"
       style={{
-        height: "520px", // full height for flex layout
+        height: "auto", // full height for flex layout
         borderTop: `${borderTop}px solid #fff`,
         borderLeft: `${borderSides}px solid #fff`,
         borderRight: `${borderSides}px solid #fff`,
@@ -45,8 +45,9 @@ export function ProjectCard({ project }) {
           className="project-image-container group mb-4"
           style={{
             display: "block",
+            aspectratio: 4 / 3,
             width: "100%",
-            height: "75%", // adjust as needed for your card height
+            height: "auto", // adjust as needed for your card height
             overflow: "hidden",
             borderRadius: "0.5rem",
             background: "#15171a",
