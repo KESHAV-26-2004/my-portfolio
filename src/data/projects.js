@@ -38,8 +38,8 @@ export const projects = [
     image: "/images/laundry.png",
     featured: true,
     skills: ["flutter", "dart", "firebase"],
-    demo: "https://your-demo-link",
-    github: "https://github.com/yourusername/laundry-app"
+    demo: "https://github.com/KESHAV-26-2004/laundry-app",
+    github: "https://github.com/KESHAV-26-2004/laundry-app"
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ export const projects = [
     image: "/images/portfolio.png",
     featured: true,
     skills: ["react", "css", "nextjs", "tailwind"],
-    demo: "https://your-portfolio-link",
-    github: "https://github.com/yourusername/portfolio"
+    demo: "https://my-portfolio-keshavs-projects-72997bdc.vercel.app/",
+    github: "https://github.com/KESHAV-26-2004/my-portfolio"
   }
 ];
