@@ -4,7 +4,7 @@ import React from "react";
 import { Github} from "../assets/AllSvgs";
 
 const SOCIALS = [
-  { name: "LinkedIn", icon: "/alinkedIn.svg", url: "https://www.linkedin.com/in/keshav-80885b217" },
+  { name: "LinkedIn", icon: "/alinkedIn.svg", url: "https://www.linkedin.com/in/keshav262004" },
   { name: "Instagram", icon: "/instagram.svg", url: "https://www.instagram.com/_verma__keshu_?igsh=MWh5YzQxcWwwczhmZg==" },
   // Add more as needed
 ];
@@ -193,7 +193,7 @@ export default function ContactSection() {
                 Send Message
             </button>
             <a
-                href="/Resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
