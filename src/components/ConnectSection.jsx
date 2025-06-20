@@ -193,7 +193,7 @@ export default function ContactSection() {
                 Send Message
             </button>
             <a
-                href="/Resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
