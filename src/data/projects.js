@@ -38,7 +38,7 @@ export const projects = [
     image: "/images/laundry.png",
     featured: true,
     skills: ["flutter", "dart", "firebase"],
-    demo: "https://github.com/KESHAV-26-2004/laundry-app",
+    demo: "https://drive.google.com/file/d/1WJj7GN6IIqtkEjY1nqcEl5k9lluJr8-K/view?usp=sharing",
     github: "https://github.com/KESHAV-26-2004/laundry-app"
   },
   {
