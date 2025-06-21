@@ -7,8 +7,8 @@ export const projects = [
     feature: "Blocks Game",
     featured: true,
     skills: ["python", "pygame"],
-    demo: "https://your-demo-link",
-    github: "https://github.com/yourusername/goup-game"
+    demo: "https://github.com/KESHAV-26-2004/GOUP",
+    github: "https://github.com/KESHAV-26-2004/GOUP"
   },
   {
     id: 2,
@@ -17,8 +17,8 @@ export const projects = [
     image: "/images/swingclinic.png",
     featured: false,
     skills: ["java", "netbeans", "mysql"],
-    demo: "https://your-demo-link",
-    github: "https://github.com/yourusername/clinic-management"
+    demo: "https://github.com/KESHAV-26-2004/clinicmanagement_netbeans",
+    github: "https://github.com/KESHAV-26-2004/clinicmanagement_netbeans"
   },
   {
     id: 3,
@@ -27,8 +27,8 @@ export const projects = [
     image: "/images/goupai.png",
     featured: false,
     skills: ["python", "ai"],
-    demo: "https://your-demo-link",
-    github: "https://github.com/yourusername/goup-ai"
+    demo: "https://github.com/KESHAV-26-2004/GO-UP-2.0",
+    github: "https://github.com/KESHAV-26-2004/GO-UP-2.0"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const projects = [
     image: "/images/laundry.png",
     featured: true,
     skills: ["flutter", "dart", "firebase"],
-    demo: "https://drive.google.com/file/d/1WJj7GN6IIqtkEjY1nqcEl5k9lluJr8-K/view?usp=sharing",
+    demo: "https://laundry-deploy-vercel-keshavs-projects-72997bdc.vercel.app/",
     github: "https://github.com/KESHAV-26-2004/laundry-app"
   },
   {
@@ -48,8 +48,8 @@ export const projects = [
     image: "/images/laundry-ai.png",
     featured: false,
     skills: ["flutter", "huggingface", "flask"],
-    demo: "https://your-demo-link",
-    github: "https://github.com/yourusername/laundry-ai"
+    demo: "https://github.com/KESHAV-26-2004/laundry_ai_bot",
+    github: "https://github.com/KESHAV-26-2004/laundry_ai_bot"
   },
   {
     id: 6,
