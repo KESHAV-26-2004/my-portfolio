@@ -90,5 +90,7 @@ Bennett University | BTech CSE
 [LinkedIn](www.linkedin.com/in/keshav262004)
 
 📜 License
+
 This project is 100% made by me and is open for learning or collaboration.
+
 You're welcome to fork or use parts, but please don't claim ownership. 😊
