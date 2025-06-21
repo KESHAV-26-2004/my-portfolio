@@ -40,4 +40,4 @@ If you wish to distrubute or publish this portfolio, please reach out to me dire
 
 Instagram
 
-LinkedIn
+[LinkedIn](www.linkedin.com/in/keshav262004)
