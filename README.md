@@ -1,43 +1,94 @@
+# 🧺 Laundry Management App (Flutter + Firebase)
+
+A modern Flutter-based mobile app for managing laundry services efficiently for students and staff. Built completely from scratch by **Keshav Verma** using Flutter, Firebase, and Firestore — with responsive UI, secure authentication, and real-time updates.
+
 [![License: Custom](https://img.shields.io/badge/License-Custom-blue.svg)]()
+[![Made with Flutter](https://img.shields.io/badge/Made%20with-Flutter-25A4E3?logo=flutter&logoColor=white)]()
+[![Firebase](https://img.shields.io/badge/Backend-Firebase-orange?logo=firebase)]()
 
-## Keshav's DeveloperPortfolio
+---
 
-[Live Demo](https://your-vercel-portfolio.vercel.app/)  
+## 📱 Features
 
-To showcase my portfolio — my skills, my work, and a bit about myself — in a visually rich format. 🚀
+- 🔐 **Secure Login** for Students & Staff (Email/Password)
+- 🧾 **Place Laundry Orders** with service type & cloth count
+- 📊 **Staff Dashboard** for order status, payment verification
+- 🔔 **Push Notifications** for order updates
+- 📅 **Booking History**, Profile Management
+- ☁️ **Firebase Firestore** integration for real-time data
+- 📦 **Built using Flutter** with clean UI and responsive layout
 
-## How did I create this?
+---
 
-1. UI/UX was brainstormed using inspiration from [winning portfolios](https://www.awwwards.com/) and high-fidelity mockups designed in Figma.
-2. This project is implemented with [React](https://reactjs.org/) and [Next.js](https://nextjs.org/) for a scalable and fast application.
-3. Animations and transitions are powered by [GSAP](https://greensock.com/gsap).
-4. Card interactions were implemented with [Tilt.js](https://givans.net/tilt.js).
-5. The timeline section was constructed with HTML/SVGs and enhanced by GSAP animations.
-6. Animations, layer management, repaints, and reflows were optimised using Chrome Developer Tools.
+## 📸 Screenshots
 
-## How to run on local?
+> _(Add demo images here from `demo/` folder if available)_
 
-First, run the development server:
+<img src="demo/screenshot1.png" width="250"/> <img src="demo/screenshot2.png" width="250"/> <img src="demo/screenshot3.png" width="250"/>
+
+---
+
+## 🚀 Getting Started
+
+### 🛠 Prerequisites
+
+- Flutter SDK
+- Firebase account
+- Android Studio / VS Code
+- Your own `google-services.json` (not included in repo)
+
+---
+
+### 📂 Folder Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
+lib/
+├── main.dart
+├── pages/
+│   ├── login.dart
+│   ├── dashboard.dart
+│   ├── profile.dart
+├── components/
+│   └── custom_widgets.dart
+assets/
+firebase/
 ```
-Open http://localhost:3000 with your browser to see the result.
 
-## Forked or Inspired by
+🧪 Run the App
 
-[Ayush Singh's Folio](https://ayushsingh.co.in/#home) — for portfolio structure and style.
+```bash
+flutter pub get
+flutter run
+```
 
-[codebucks27](https://minimal-nextjs-portfolio-website.vercel.app/projects) — for the initial portfolio template, from this project.
+🔐 Firebase Setup (Important)
+To connect your app to Firebase:
 
-## A note on re-sharing
+1.Create a Firebase project at console.firebase.google.com
 
-While we appreciate creativity and sharing knowledge, we would appreciate proper attribution to the original authors.
-Please retain the license and attribution if you distribue or publish this portfolio.
-If you wish to distrubute or publish this portfolio, please reach out to me directly first:
+2.Add Android app → Download google-services.json and place it in:
 
-Instagram
+```bash
+android/app/google-services.json
+```
 
-LinkedIn
+3.Add iOS app (optional) → GoogleService-Info.plist goes in:
+
+```bash
+ios/Runner/
+```
+
+4.Enable Email/Password Auth and Firestore Database in Firebase console.
+
+⚠️ These files are .gitignored for security.
+
+👨‍💻 Developer
+Keshav Verma
+Bennett University | BTech CSE
+📍 India
+
+[LinkedIn](www.linkedin.com/in/keshav262004)
+
+📜 License
+This project is 100% made by me and is open for learning or collaboration.
+You're welcome to fork or use parts, but please don't claim ownership. 😊
