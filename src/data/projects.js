@@ -71,5 +71,17 @@ export const projects = [
     skills: ["react", "css", "nextjs", "tailwind"],
     demo: "https://my-portfolio-keshavs-projects-72997bdc.vercel.app/",
     github: "https://github.com/KESHAV-26-2004/my-portfolio"
-  }
+  },
+  {
+  id: 8,
+  title: "Shared Diary",
+  description: "A heartfelt React + Firebase platform where friends and couples share daily stories, photos, and moments in a private circle with approval-based access.",
+  feature: "Social + Emotional App",
+  image: "/images/Shared_diary.png",
+  featured: true,
+  skills: ["react", "firebase", "typescript", "tailwind"],
+  demo: "https://shared-diary-app.vercel.app/", 
+  github: "https://github.com/KESHAV-26-2004/shared-diary-app"
+}
+
 ];
