@@ -83,5 +83,4 @@ export const projects = [
   demo: "https://shared-diary-app.vercel.app/", 
   github: "https://github.com/KESHAV-26-2004/shared-diary-app"
 }
-
 ];
