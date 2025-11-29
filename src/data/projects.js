@@ -78,9 +78,31 @@ export const projects = [
   description: "A heartfelt React + Firebase platform where friends and couples share daily stories, photos, and moments in a private circle with approval-based access.",
   feature: "Social + Emotional App",
   image: "/images/Shared_diary.png",
-  featured: true,
+  featured: false,
   skills: ["react", "firebase", "typescript", "tailwind"],
   demo: "https://shared-diary-app.vercel.app/", 
   github: "https://github.com/KESHAV-26-2004/shared-diary-app"
+  },
+ {
+  id: 9,
+  title: "Deep Adaptive Image Anonymizer (DAIA)",
+  description: "AI-based system that detects sensitive regions—faces, text blocks, IDs—and applies adaptive anonymization using EfficientNet and OpenCV.",
+  feature: "AI Privacy Tool",
+  image: "/images/daia.png",
+  featured: true,
+  skills: ["python", "pytorch", "opencv", "onnx"],
+  demo: "https://github.com/KESHAV-26-2004/deep-adaptive-image-anonymizer",
+  github: "https://github.com/KESHAV-26-2004/deep-adaptive-image-anonymizer"
+  },
+  {
+  id: 10,
+  title: "AI Insight Pipeline",
+  description: "A fully automated end-to-end data intelligence pipeline with profiling, cleaning, sentiment analysis, feature engineering, relations, and final reporting.",
+  feature: "Data Intelligence",
+  image: "/images/ai_insight.png",
+  featured: false,
+  skills: ["python", "pandas", "pytorch", "ml"],
+  demo: "https://github.com/KESHAV-26-2004/ai_insight_pipeline",
+  github: "https://github.com/KESHAV-26-2004/ai_insight_pipeline"
 }
 ];
