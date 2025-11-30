@@ -33,6 +33,8 @@ const skillGroups = [
       { name: "AI", icon: "/skill/ai.svg", level: 60, tip: "RL & ML experiments" },
       { name: "huggingface", icon: "/skill/huggingface.svg", level: 55, tip: "AI assistant in Flutter" },
       { name: "Flask", icon: "/skill/flask.svg", level: 60, tip: "APIs for AI projects" },
+      { name: "PyTorch", icon: "/skill/pytorch.svg", level: 70, tip: "Deep learning & model training" },
+      { name: "OpenCV", icon: "/skill/opencv.svg", level: 65, tip: "Computer vision processing" },
     ],
   },
   {
