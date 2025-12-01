@@ -35,6 +35,7 @@ const skillGroups = [
       { name: "Flask", icon: "/skill/flask.svg", level: 60, tip: "APIs for AI projects" },
       { name: "PyTorch", icon: "/skill/pytorch.svg", level: 70, tip: "Deep learning & model training" },
       { name: "OpenCV", icon: "/skill/opencv.svg", level: 65, tip: "Computer vision processing" },
+      { name: "ONNX", icon: "/skill/onnx.svg", level: 60, tip: "Model optimization & export" },
     ],
   },
   {
