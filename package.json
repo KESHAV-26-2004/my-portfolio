@@ -15,7 +15,7 @@
     "framer-motion": "^12.15.0",
     "gsap": "^3.13.0",
     "lottie-react": "^2.4.1",
-    "next": "15.3.3",
+    "next": "^15.5.9",
     "react": "^19.0.0",
     "react-circular-progressbar": "^2.2.0",
     "react-dom": "^19.0.0",
