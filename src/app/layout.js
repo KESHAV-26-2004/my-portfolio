@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: 'swap', 
-  preload: true,
+  //preload: true,
 });
 
 export const metadata = {
@@ -24,8 +24,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"
-      suppressHydrationWarning="true"
-      data-qb-installed="true" >
+      suppressHydrationWarning>
+      {/*data-qb-installed="true" */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
