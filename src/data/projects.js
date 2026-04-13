@@ -19,7 +19,7 @@ export const projects = [
     image: "/images/laundry.webp",
     featured: false,
     skills: ["flutter", "dart", "firebase"],
-    demo: "https://laundry-deploy-vercel-keshavs-projects-72997bdc.vercel.app/",
+    demo: "https://laundry-deploy-vercel.vercel.app/",
     github: "https://github.com/KESHAV-26-2004/laundry-app"
   },
 
@@ -76,7 +76,7 @@ export const projects = [
     image: "/images/portfolio.webp",
     featured: true,
     skills: ["react", "nextjs", "tailwind", "css"],
-    demo: "https://my-portfolio-keshavs-projects-72997bdc.vercel.app/",
+    demo: "https://my-portfolio-six-smoky-95.vercel.app/",
     github: "https://github.com/KESHAV-26-2004/my-portfolio"
   },
 

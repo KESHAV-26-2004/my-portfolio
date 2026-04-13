@@ -6,7 +6,7 @@ A modern interactive developer portfolio showcasing projects, skills, and techni
 
 <p align="center">
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://my-portfolio-keshavs-projects-72997bdc.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://my-portfolio-six-smoky-95.vercel.app/)
 ![GitHub stars](https://img.shields.io/github/stars/KESHAV-26-2004/my-portfolio)
 ![GitHub forks](https://img.shields.io/github/forks/KESHAV-26-2004/my-portfolio)
 
@@ -29,7 +29,7 @@ A **personal developer portfolio website** built to showcase projects, technical
 The portfolio focuses on **interactive design, smooth animations, and immersive presentation**, allowing visitors to explore projects and skills in a visually engaging way.
 
 🔗 **Live Portfolio**
-[https://my-portfolio-keshavs-projects-72997bdc.vercel.app/](https://my-portfolio-keshavs-projects-72997bdc.vercel.app/)
+[https://my-portfolio-keshavs-projects-72997bdc.vercel.app/](https://my-portfolio-six-smoky-95.vercel.app/)
 
 ---
 
